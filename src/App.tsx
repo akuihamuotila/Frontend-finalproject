@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import CustomerList from "./components/CustomerList";
 import TrainingList from "./components/TrainingList";
 import TrainingCalendar from "./components/TrainingCalendar";
+import Statistics from "./components/Statistics";
 
 const App = () => {
   return (
@@ -32,11 +33,20 @@ const App = () => {
         >
           Kalenteri
         </Button>
+        <Button
+          component={Link}
+          to="/statistics"
+          variant="contained"
+          color="primary"
+        >
+          Tilastot
+        </Button>
       </nav>
       <Routes>
         <Route path="/customers" element={<CustomerList />} />
         <Route path="/trainings" element={<TrainingList />} />
         <Route path="/calendar" element={<TrainingCalendar />} />
+        <Route path="/statistics" element={<Statistics />} />
       </Routes>
     </>
   );
